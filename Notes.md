@@ -56,6 +56,20 @@ Note: the README and Notes .md files will reamin outside this project folder for
 
 - inside the "portfolio-html-site" folder create two html files: index.html and about.html
 
+- I type some heading text on both pages and "Live Server" them just to make sure they area working ok. 
+
+--------------------------------------------------------------------------------
+
+2. Lets start with the Styling part
+
+- created a link and a stylesheet for it 
+
+- now create two or more style rules for the html docs and "Live Server" them to make sure the css link is ok and we can now start working adding style and content to the project documents
+
+
+
+
+
 
 
     
