@@ -66,6 +66,14 @@ Note: the README and Notes .md files will reamin outside this project folder for
 
 - now create two or more style rules for the html docs and "Live Server" them to make sure the css link is ok and we can now start working adding style and content to the project documents
 
+--------------------------------------------------------------------------------
+
+3. Images 
+
+- create a folder within the project folder called images. This will hold the project images.
+
+*A great source for **free** source for pictures is unsplash*
+
 
 
 
