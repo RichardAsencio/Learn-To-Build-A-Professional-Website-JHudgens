@@ -6,3 +6,7 @@ This is my follow/practice repo for the free YouTube video course: *HTML5 & CSS:
 1. [YouTube - long link](https://www.youtube.com/watch?v=5bMdjkfvONE) & [YouTube - short link](https://youtu.be/5bMdjkfvONE)
 
 2. [Udemy Course ](https://www.udemy.com/course/html-css-code-bootcamp/)
+
+3. You can also take a look at the notes [here](Notes.md).
+
+
