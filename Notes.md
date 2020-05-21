@@ -25,6 +25,7 @@ four elements, and it will use: *
     - split column layout
     - content
 
+
 TIPS:
 
 1. When tackling a project like this, doing this type of todo list will help by giving me 
@@ -73,6 +74,33 @@ Note: the README and Notes .md files will reamin outside this project folder for
 - create a folder within the project folder called images. This will hold the project images.
 
 *A great source for **free** source for pictures is unsplash*
+
+
+--------------------------------------------------------------------------------
+
+
+4. For now we pretty much have the *architectural / structure* thing done: the folders, the files and the images are all set in place. Now comes the CODING stuff ....
+
+
+--------------------------------------------------------------------------------
+
+5. start building the nav bar 
+
+- create both links for the index and about pages with anchor tags
+
+- created a parent div class named container and within this have a child div class called nav-wrapper and within this have child elements: the two anchor tag for links index and about and another simple div for my name
+
+- now if I want to have index and about on the left side of my page and I want my name on the right side of the page I can use div to create two different containers to separate these to the left and the right. Will then make two  div classes: left-side div class and right-side div class, each containing index and about anchor tags for the left most column, and the other containing the  regular div with my name for the right most column
+
+What we're doing is we are wrapping the code in a way that is goin f to make it much more straight forward to select, manipulate and custome style these as individual pieces, or properly named: html elements.
+
+Hence I will also create a div wrapper for each of my anchor tags, one for the inde.html and another for the about.html. Both wrappers will have a div class "nav-link-wrapper", also note this divs are child elements of the div classes: left-side and right-side respectively.
+
+And also I am going to create another div wrapper class brand,  for the div containing the name text. It it will be a child of the right-side div class
+
+For now the Nav bar has been set up as it relates to the tags to structure/layout it, and also style it.
+
+
 
 
 
