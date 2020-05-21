@@ -98,7 +98,64 @@ Hence I will also create a div wrapper for each of my anchor tags, one for the i
 
 And also I am going to create another div wrapper class brand,  for the div containing the name text. It it will be a child of the right-side div class
 
-For now the Nav bar has been set up as it relates to the tags to structure/layout it, and also style it.
+For now the Nav bar has been set up as it relates to the structural tags. In other words tags that will allow us to  structure/layout it, and also style it.
+
+
+--------------------------------------------------------------------------------
+
+6. style the nav bar
+
+- erase the initial styles rules we had at he stylesheet to corroborate the links were working
+
+- here we area going to start working with flexbox, a tool of CSS
+
+- first I will target the div class that holds the nav bar, and that is the nav-wrapper div, not the container but the nav-wrapper and give it a property/value rule of display: flex; ... once this happens and I refresh the html document the name in my html doc moves to the left instead of being beneath the Home and About text ...
+
+The flex value to property display it is applied to the div class nav-wrapper and this is applied to the child elements of nav-wraper, which are two: the left-side div class and the right-side div class. It just ignores whatever is inside the left-side and right-side div elements. 
+
+So now flex will now not have the div child elements of nav-wrapper to be stacked on top of each other but lined up next to each other.
+
+- also add to nav-wrapper the property/value: justify:content; ... this will do as it says, it will justify the content by spacing the two child elements of nav-wrapper, which are left-side and right-side will all the space it has to do so. Take a look now to see how the name text moves to the extreme right side of the page. 
+
+- add 38 pixels to padding. 
+
+- up until we have added styles to the entire vav bar, now we can start adding different styles to the left-side and right-side divs 
+
+- so to the left-side div class I can add display:flex.
+Since this left-side div class has two child elements: two nav-link wrappers, now flex will make them be, instead of one on top of the other, be one next to the other. Refresh and take a look. 
+
+- now to style by traversing the three in CSS is like this: we will apply a style to the nav-wrapper, then left-side-wrapper then div. Whatever style rule I apply will traverse form the nav-wrapper, going thru left-side-wrapper until amy div that is the child of left-side-wrapper, and that's where the style rules will be applied. And to this I will apply a margin-right: 20px to separate the two  elements nav-link-wrapper that have one the index. html and the other the about.html. And also change the font size to font-size: 0.9em;
+
+The way em works it is the percentage of the normal size of the font. So 1em will be the actual size of the font, and 0.9em will be 90% of the actual size of the font.
+
+I can also do not have to type text on the HTML document as uppercase, as I can do it at CSS. So for the Home and About text within the anchor tags I can also include text-transform: uppercase.
+
+- now I can add style specifically to each of the nav-link-wrapper (there are two, one holds the anchor tag for the index.html and the ohter holds the anchor tag for the about.html). So I add height of 22px, and then border-bottom: 1px solid transparent and then transition: border-bottom 0.5s, that means half a second.
+
+I will not going to be able to see the border now but will it work on animations. 
+
+Transition will call upon the part taht will want to animate, so here we want to animate the border-bottom for half second. 
+
+Now that I have that nav-link-wrapper styled I can go and style the anchor tags within that div. And I do that like this: 
+.nav-link-wrapper a. This means that insde of the nav-link-wrapper jsut grab the a link. And we can add a different color: #8a8a8a, also if I take a look a the links of Home and About at the html document, I will see that they area undelined. It is ugly but that's how they come with the standard basic HTML underline when used. I can eliminate this by telling not to have any underline at all. So we're going to use the border-bottom attribute to manage that style. So we say text-decoration: none; and transition: color 0.5s.
+
+What we are doing here is we area setting it up so that we can have two animations because we want to animate the color and also want to animate the border-bottom.  
+
+If we look at the html doc the underline is gone and we have changed the color.
+
+- we're pretty much about to end styling the nav bar, we just have two more styles to do: The first one is the hover action. So that when the cursor hover above the Home and About elements we want it to change the style. 
+For this I type: 
+.nav-link-wrapper:hover {}
+
+And that's how I tell CSS to use a hover state action. So I type: 
+border-bottom: 1px solid black;
+
+And then type another rule: 
+.nav-link-wrapper a:hover {}
+and add color: black;
+
+Actually we have two different hover states, one for the div and one for the link itself. AND THAT'S HOW IT WORKS ... NO EXPLANATION OF WHY .... :-/
+
 
 
 
