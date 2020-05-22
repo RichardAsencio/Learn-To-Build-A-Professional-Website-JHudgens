@@ -1,3 +1,5 @@
+/* Master Styles */
+
 body {
     margin: 0px;
 }
@@ -6,6 +8,8 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+/* Nav Styles */ 
 
 .nav-wrapper {
     display: flex;
@@ -47,3 +51,4 @@ body {
     color: black;
 }
 
+/* Portfolio Styles */

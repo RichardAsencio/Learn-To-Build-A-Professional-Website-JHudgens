@@ -185,6 +185,54 @@ Just like Flexbox was able to take those div elements and separate them out, Gri
 
 --------------------------------------------------------------------------------
 
+8. Now we are goint to style the portfolio styles
+
+By first we can first write a comment identifying the master styles, nav styles and portfolio styles. This I can reference this comments to guide myself when looking where to make changes into my css stylesheet.  
+
+Since we already worked the nav bar we are going to work out that div class, so we check our nav-wrapper and we are going to do the same thing for the portfolio items. So I look where is the closing div tag for the nav-wrapper div class and after that closing tag I create a div class:
+content-wrapper, and inside this I will create another wrapper called portfolio-items-wrapper, and inside this wrapper I will create wrapper called portfolio-item-wrapper. 
+
+The class content wrapper is everything below the nav bar, then tghe portfolio items-wrapper this is what stores the collection of all the portfolio items, then inside that we area going to have the portfolio-item-wrapper (item in singular), and this will hold a single one item. 
+
+So now inside the portfolio-item-wrapper I will create a portfolio-img-background div class. 
+
+The names declaration helps us to be consistent and give meaningful names to our classes, and this last class will have an image as its background. I will also add an inline style to that one div class or portfolio-image-background and that is style="background-image:url(images/portfolio1.jpg)" (this is a css snippet that has a path to the iamge that I want to grab)
+
+This image is not gonna show up yet because we have not given it height yet, but we can go to the html dev tools inspector to make it is there. And indeed it is.
+
+The image didnt show up is because we are going to do a little trick. Because if you notice that we have text that is layered on top of the image and this cool little animation and its fading, and that is something that HTML and CSS right off the box really does not do, so we nee to have a way of implementing that kind of style, so the way we did it is creating a div and it's only job is to have an image and to have that image as it's background. 
+
+Now we area gonna have the text in a completely separate div so lets add that part now. 
+
+Now I make sure I am outside of that last portfolio-img-background but still inside the portfolio-item-wrapper.
+And create a div class:
+image-text-wrapper and inside this wrapper I create another wrapper to manage the logo, so will call it as logo-wrapper. And inside of this last div I am gonna have the image. 
+
+There are two ways of working with images with HTML and CSS: the first is when you want a background image then you use straight CSS code with a call to a URL of wherever it's at, just like we area using it at this div: 
+<div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)">
+
+If you see here the image is used by adding an inline style attribute to the div html tag with a portfolio-imag-background div class.
+
+But if I am using images inside my html then I want to use the IMG tag and pass in the src attribute which is short for source and then I pass in the path. 
+
+So for the first one is: 
+<img src="images/logos/crondose.png> 
+
+And make sure you dont have any spelling mistakes or anyting like that or else it will find find the image. 
+
+And so that is going to be the logo wrapper and below that img tag outside the logo-wrapper div but inside the image-text-wrapper div is going to be the subtitle class:
+and then type text into it. in my case was: I built this o 2017.
+
+
+Now i can go ahead and copy from the singular portfolio.item-wrapper div class and copy until it's closing tag and paste it eleven times. 
+
+And then I am going to call the appropriate logos. 
+
+
+
+
+
+
 
 
 
