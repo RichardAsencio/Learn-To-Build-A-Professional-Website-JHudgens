@@ -156,11 +156,34 @@ and add color: black;
 
 Actually we have two different hover states, one for the div and one for the link itself. AND THAT'S HOW IT WORKS ... NO EXPLANATION OF WHY .... :-/
 
+--------------------------------------------------------------------------------
+
+7. Portfolio items 
+This is what takes the majority of the screen real estate so this
+
+Now I can go into the top of the CSS style sheet to include my master style rules, so I am giving to body tag a margin of 0px, because it comes by default of 8px. SO to get rid of that we need to overrid it by turning intol to 0px. Right on top of the style sheet. 
+
+Also in this portfolio page we want the images budding up against the sides of the page. 
+
+Now we are going to use CSS Grid. It has a lot of similarities to flexbox, it also a tool directly built into CSS and gives you the ability to align items. 
+
+## The teacher Jordan Hudgens says his rule of thumb is to do his layouts in Grid and to build out the small eelements like a nav bar in flexbox. 
+
+To apply the grid system to the whole page we have to select the container clas div. There's just one and everything in this page is within this div tag. 
+
+So I type .container {} and give it: 
+display: grid; and grid-template-columns: 1fr;
+
+This is telling that I want the container to use grid and then I want to create these template columns using 1fr, which stands for fraction units. That means that our entire layout is going to be considered as having columns. 
+
+1fr means 100%, I want the column to take up 100% of the page; in this case I want the nav bar column to go from end to end. 
+
+Our portfolio items should go from end to end. 
+
+Just like Flexbox was able to take those div elements and separate them out, Grid does the same thing. And when I say 1fr that means a hundred percent. I want you to take up one fractional unit, which menas this column of the nav bar should go from end to end. Just like our portfolio items should go from end to end. So everything we add below the nav bar is going to be considered in that next row down below; and that's all the styles we need to add to our container class. 
 
 
-
-
-
+--------------------------------------------------------------------------------
 
 
 

@@ -1,3 +1,12 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
