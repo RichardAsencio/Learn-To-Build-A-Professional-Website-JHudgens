@@ -229,6 +229,45 @@ Now i can go ahead and copy from the singular portfolio.item-wrapper div class a
 And then I am going to call the appropriate logos. 
 
 
+--------------------------------------------------------------------------------
+
+
+9. now is time to style the portfolio items
+
+So I go to the stylesheet at the bottom where a have a comment titled: Portfolio Styles and start adding the styles.
+
+First I add a the grid value to the class .portfolio-items-wrapper. I am adding Grid to this container that holds all my portfolio items.
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+And then grid-template-columns 1fr 1fr 1fr ... so what this is means is that there's going to be  three columns and is going to give each one of them give each one of the columns their own full size column, one next to the other. 
+
+And now I style class .portfolio-item-wrapper (the singular one) with position: relative;
+
+What this is going to do is allow us to have some more more  flexibility with how we position each one of the items inside of it. 
+
+Was already mentioned how behavior like this, like having text or images sitting on top of other images, is not allowed by default HTML and CSS for that kind of thing, so we are gonna have to force that to happen. 
+
+The first step is by adding a position relative on the item (singular) wrapper and then we are going to style that iamge background so I do: portfolio-img-background {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+With a height of 350pixels and a width of 100%, that means the width will adjust automatically relative to the picture height.
+
+What the  background-size of cover does, is imagine a scenario in which you have images that are not all the same size (which is our case in this project), then we want to make sure that  we are cropping the images in a way that they all sit nicely    
+next to each other. Thats what this style rule does.
+
+And then background-position: center; and background-repeat: no-repeat; 
+
+This is the reason why Hudgens set a background image on each one of those elements and why he used inline styles so instead of us putting all the images in image HTML elementds, the background images were put with a CSS inline style and the logo images with a regular img src HTML tag.
+
 
 
 
