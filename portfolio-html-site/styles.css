@@ -90,8 +90,16 @@ body {
     margin-bottom: 20px;
 }
 
-.subtitle {
+/* This needs to be more specific with selector*/ 
+.image-text-wrapper:hover .subtitle {
     font-weight: 600;
     color: lightseagreen;
+}
+
+
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%)
 }
 

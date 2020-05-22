@@ -336,6 +336,37 @@ As it is the past rule technically works but we have to add a temporary note tha
 
 
 
+So now lets get those images get dark: 
+
+So I am going to create a class: 
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%)
+}
+
+The transition will take 1 second and the brightness is set for 10%
+
+This is not gonna work yet, because it not anywhere in our HTML index file, but how it is going to work is we are gonna use it with our own special function.  
+
+We are gonna have JavaScript dynamically add and remove this class when someone is hovering over it. 
+
+This trick is possible to implement with CSS but it is tricky. 
+
+Now we can go over the .subtitle class note that we had and change it to: 
+
+.image-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+Now when I refresh this is working if the subtitle changes form black to seagreen when I hover over it. 
+
+
+
+
+
+
+
 
 
 
