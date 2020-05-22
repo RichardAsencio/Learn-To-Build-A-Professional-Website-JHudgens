@@ -346,13 +346,13 @@ So I am going to create a class:
 
 The transition will take 1 second and the brightness is set for 10%
 
-This is not gonna work yet, because it not anywhere in our HTML index file, but how it is going to work is we are gonna use it with our own special function.  
+This is not gonna work yet, because we have not called it or applied it anywhere in our HTML index file, but how it is going to work is we are gonna use it with our own special function.  
 
 We are gonna have JavaScript dynamically add and remove this class when someone is hovering over it. 
 
 This trick is possible to implement with CSS but it is tricky. 
 
-Now we can go over the .subtitle class note that we had and change it to: 
+Now we can go over the .subtitle class that had a note "this needs to ..." that we had and change it to: 
 
 .image-text-wrapper:hover .subtitle {
     font-weight: 600;
@@ -360,6 +360,60 @@ Now we can go over the .subtitle class note that we had and change it to:
 }
 
 Now when I refresh this is working if the subtitle changes form black to seagreen when I hover over it. 
+
+Now we have to add the start sort of state. So the text should be seen only when someone is hovering over the element, so lets remove the hover value and add the transition.
+
+For this I create another rule that is the startig point, meaning when the text is not visible. So on top of (before of) of this rule:
+
+.image-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+I will create this other rule: 
+.image-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+}
+
+meaning that the transition take 1 second and the color of the text is transparent. 
+
+And that is the starting state of this element.
+
+If until now I refresh and check the transition I will see that the text jumps a little bit from size when it appears, and that is because at:
+
+.image-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+}
+
+we have not declared a font weight, whereas in:
+
+.image-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+we declared a font weight. SO what happens is when we hover over the image, the animation works well and the text appears, but it appear at one size and then jumps into another a little bigger size creating sort of like weird stange effect. And that is because ot start:
+.image-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+}
+
+the fonr weight was not included as part of the rules. So just have to add it to the same value as the end state
+
+to if like this:
+.image-text-wrapper .subtitle {
+    font-weight: 600; 
+    transition: 1s;
+    color: transparent;
+}
+
+
+
+
+
+
 
 
 

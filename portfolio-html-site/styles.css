@@ -90,13 +90,30 @@ body {
     margin-bottom: 20px;
 }
 
-/* This needs to be more specific with selector*/ 
+/* 1- This needs to be more specific with selector*/
+/* .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}  */
+
+/* 2- This was after the "needs to be more specific with selector" */
+/* .image-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+} */
+
+.image-text-wrapper .subtitle {
+    font-weight: 600;
+    transition: 1s;
+    color: transparent;
+}
+
+
+/* 3- This was after the after the "needs to be more specific with selector" */
 .image-text-wrapper:hover .subtitle {
     font-weight: 600;
     color: lightseagreen;
 }
-
-
 
 .img-darken {
     transition: 1s;
