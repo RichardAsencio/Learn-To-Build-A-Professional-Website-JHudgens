@@ -269,9 +269,44 @@ And then background-position: center; and background-repeat: no-repeat;
 This is the reason why Hudgens set a background image on each one of those elements and why he used inline styles so instead of us putting all the images in image HTML elementds, the background images were put with a CSS inline style and the logo images with a regular img src HTML tag.
 
 
+--------------------------------------------------------------------------------
 
+10. now we need to work with the text 
 
+If we take a look at the page right now, we area going to see that the text that corresponds to each image div element is sitting below the image, and that's the default behavior for HTML to handle this. 
 
+Whenever you have two divs sitting next to each other, or below each other when you code, HTML is going to say: inside that div you just slide on right underneath and then is gonna continue on. 
+
+But we are saying nope, I want to position the html right on top of this other div.
+
+So the way we do that is first by selecting it with: 
+
+.image-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+IMP
+- one key thing to note here: 
+position relative is required if you want to have any position absolute element nested isndie of it. So that's why we have position realtive in .portfolio-item-wrapper and position absolute in image-text-wrapper which happens to be a child element of portfolio-item-wrapper.
+
+Position aboslute is saying we are forcing this element someplace where it usually is not there, and in other to do that it has to have a parent element that has a relative position. 
+
+We are saying that this image text wrapper is going to be positioned at the very top (top: 0), then inside of it we are going to use flexbox (display: flex and flex-direction: column) we area going to center the content with justify: center and align-items: center; 
+
+justify-contents aligns from the sides right to left and align-items aligns them from top to bottom
+
+We want it to take the full parent height the full 100% percent height: 100%
+
+And all other text to be centered, with the padding, etc 
 
 
 
