@@ -309,6 +309,17 @@ We want it to take the full parent height the full 100% percent height: 100%
 And all other text to be centered, with the padding, etc 
 
 
+--------------------------------------------------------------------------------
+
+11. now the logos, and target those with 
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+
 
     
 
