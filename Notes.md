@@ -319,6 +319,27 @@ And all other text to be centered, with the padding, etc
 
 
 
+--------------------------------------------------------------------------------
+
+12. we are now going to the part into where we are adding that dark fade animation, in whcih when I hover my cursor on top of any portfolio item the background photo darkens and the subtitles appear THIS WILL REQUIRE JAVASCRIPT 
+
+So lets first do the colors and styles for this subtitles: 
+
+.subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+font weight is used to bolden the text and color to color it
+
+As it is the past rule technically works but we have to add a temporary note that says that "it needs to be more specific with selector" ... it is a note so that we dont forget to address it later ...
+
+
+
+
+
+
+
 
 
     
