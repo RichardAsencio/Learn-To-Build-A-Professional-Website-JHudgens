@@ -10,3 +10,6 @@ This is my follow/practice repo for the free YouTube video course: *HTML5 & CSS:
 3. You can also take a look at my notes [here](Notes.md).
 
 
+4. Once built I want to try this on GitHub pages to see how how responsive it is
+
+4. I want to build a  portfolio page like this for 

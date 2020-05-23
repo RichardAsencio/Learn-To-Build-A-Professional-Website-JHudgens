@@ -400,7 +400,7 @@ we declared a font weight. SO what happens is when we hover over the image, the 
     color: transparent;
 }
 
-the fonr weight was not included as part of the rules. So just have to add it to the same value as the end state
+the font weight was not included as part of the rules. So just have to add it to the same value as the end state
 
 to if like this:
 .image-text-wrapper .subtitle {
@@ -408,6 +408,164 @@ to if like this:
     transition: 1s;
     color: transparent;
 }
+
+
+
+--------------------------------------------------------------------------------
+
+13. now the JavaScript part 
+
+JavaScript is always at the very bottom of the page, and the reason for that is because JavaScript works with selectors just like CSS do, but you would not like your JavaScript code to run before the entire page is loaded. 
+
+So after the body closing tag we include a script tag.
+
+And now we are going to select all the portfolio items on the page.  
+
+So I open the console on my html doc. Here we area going to build a selector, so type: 
+$('.portfolio-item-wrapper') and hit enter.
+
+This will return: 
+<div class="portfolio-item-wrapper"> with all its child elements
+
+So that means that it got and pulls in the first element in the html doc page that corresponded to this class definition. This ultimately means that this is working properly.
+
+This $('.portfolio-item-wrapper') syntax is different than the JavaScript syntax but this initial code snippet was to illustrate the power of JavaScript within the browser. 
+
+
+So let's get started with javaScript: 
+
+What we want to do is to store this portfolio item in a variable. 
+
+So we type: 
+
+const portfolioItems = document.querySelectorAll(.portfolio-item-wrapper)
+
+I am saying, I want to find all the elements on the page that have that selector (.portfolio-item-wrapper) 
+
+When I type this nothing gets returned but next if I type  portfolioItems (which is the name of the variable I just created), it will return a node list.
+
+If I expand it I will it has a length of 12 and all the items are  actually inside this variable. So we are now sure this is working as it is supposed to, which is that it grab all the twelve elements. 
+
+Event Listener
+The same way we were sent to the hover state in CSS, we can do that in JavaScript as well. 
+
+So for JavaScript you have be more explicit. 
+
+So what we tried on the console, the whole const variable initialization, since we confirmed that it is working, we can go and grab it (copy it) and paste it in our html doc script tag. 
+
+
+And now we want to loop over this. 
+
+So I am going to add an event listener, so I type: 
+
+portfolioItems.forEach()
+
+
+- forEach is a callback function, meaning that it takes a function as an argument
+
+- a function is just a process that runs
+
+So we are saying: we want this process to run for each one of the portfolio items
+
+We need to be explicit so we need to work with all of them. The portfolioItem inside the forEach paretheses is not anything in particular, it could be x, y or z. So the name portfolioItem is to be very explicit, it is just an iterator variable (a variable that will hold a different value each time an iteration is complete)
+
+portfolioItems.forEach(portfolioItem => {
+
+})
+
+See the code above this text: so now everything inside the curly brackets is going to be run and applied on each of the portfolio items.
+
+
+portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover)
+})
+
+See the code above this text. Inside the curly braces I add 
+portfolioItem.addEventListener('mouseover')
+
+This means that as it iterating I can grab one single item and we can whatever we want with it. Just like we added our hover state in CSS here we dont call it hover, here is called a "mouseover" event. 
+
+And the mouseover event, also takes a function:
+
+portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover, () => {
+
+    })
+})
+
+
+Is exactly as when we declared the forEach function initially, but we passed an argument which was the arrow function portfolioItem => { }. But here we do not have any argument so we are just running whats called an anonymous function. We are saying just go and run this process. 
+
+Here we can console log it to see if it works: 
+
+portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                console.log(portfolioItem);
+            })
+        })
+
+Now when I paste this into my html script tag element and I go into the page with the console open, each time I hover over a portfolio item it logs the info of this portfolio item on the console and if I expand it logged item it gives me exactly the details of this item, the entire div. This corroborates that my forEach function is working properly.
+
+Remember we are doing this because we want to add the darken class thing to each portfolio item whenever someone hovers (mouseover) that particular portfolioItem. So now that we got access to this items thru this forEach add listener process, lets do it.
+
+What we are doing here is we are taking that html object of that div and those classes and we area using JavaScript to manipulate them. 
+
+But lets first use console.log again but with portfolioItem and childNode. 
+When I console logged before with portfolioItem, this gives us a lot of data, the full div but we only want one of the items here, and this childNode method does that.  
+
+portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                console.log(portfolioItem.childNodes):
+            })
+        })
+
+
+With the childNodes, what that means if you remember we had those child nodes we saw at the console. They are nested divs, and with this childNodes, we can have them come out. So we can console log them to see them. 
+
+When I do so now when I hover over any portfolioItem in the console I can see each portfolio item aI hover over will return me an item called: nodelist(5),  and when I expand it, it looks like an array, a colelction of data. For each portfolioItem there's an array, and we have indices, the first one is text, but we want the data contained in the second index (1:div.portfolio-img-background) so when I expand this one I can see the info:
+<div class="portfolio ......>
+
+This is the portfolio-img-background that I want to manipulate and it is index 1, and it is the one that I want to grab, so and I am going to add the method classList and log it to see what happens. 
+
+Now I see a DOMTokenList each time a hover over a portfolio item. 
+
+Notice how we have traversed this entire element:
+we first started of bu grabbing them all, then we narrowed it down, filtered down until we got the exact div we wanted, and then from there we filtered it down even more, and we said just give me the class list. 
+
+And so now that we have all of that I can just leave the console.log there for a moment and add a method add with the image darken class like this: 
+
+portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                console.log(portfolioItem.childNodes[1].classList);
+                portfolioItem.childNodes[1].classList.add('img-darken');
+            })
+        })
+and hit refresh and go to the page to see if the darken animation effect takes place and it is working 
+
+However the images are staying dark. and that's because we need to add one more eventListener. So I go and copy the whole eventlistener code block and edit it like this: 
+
+Instead of adding another mouseover event, we change it to mouseout, and instead of class list add we change to class list remove. AN remove all the consolelog statements on both as they are no longer needed.  
+
+portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                portfolioItem.childNodes[1].classList.add('img-darken');
+            })
+
+            portfolioItem.addEventListener('mouseout', () => {
+                portfolioItem.childNodes[1].classList.remove('img-darken');
+            })
+        })
+
+
+
+
+Running all these consolelogging contantly, and run these debugging steps and processes, to check and see all the values that over there verify the data. Because as long as we know the values I will not get stuck. One of the biggest challenges is not knowing enough about the data thats when we run into bugs. So try to always listen and watch what the data is telling you.    
+
+Up until now, I know not only how to work with animations and all kinds of styles like that, and create my layouts, I also now know how to traverse the entire DOM, all of this HTML nodes, and to apply dynamic styles based on the user behavior. 
+
+
+
+
 
 
 
