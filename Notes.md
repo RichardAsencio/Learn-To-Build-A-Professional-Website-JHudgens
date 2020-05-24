@@ -566,6 +566,108 @@ Up until now, I know not only how to work with animations and all kinds of style
 
 
 
+--------------------------------------------------------------------------------
+
+14. now the About page 
+
+I will go to my About html doc and erase everything, and go to my index.html and copy the entire doc to paste it to my About html doc. 
+
+Now we will remove wht we dont need, which is most of it. 
+
+
+Change the title to About, keep the div class container, the div class nav wrapper and the div class content wrapper, but whats inside the div content wrapper erase it. I should be left with the opening and closing tags of the content wrapper div class.
+
+Also erase the javascript code.
+
+At the content wrapper class I create div class two-column-wrapper, and inside of this I can have the profile image and the text in two separate containers or divs. So I create two classes inside this two colum wrapper div: a div class named profile-image-wrapper where I am going to have an image and a div class named profile-content-wrapper, where I am going to have the text.  
+
+So I go to back to my recent created class profile image wrapper and inside of it create the image tag for my profile picture like this:
+
+<img src="images/profile.jpg">
+
+
+Now go to the class profile-content-wrapper and paste content there.
+
+If refresh and check the page I will that the image takes almost the whole page and the text is below the image. 
+
+So we have to head to the stylesheet to add styles to this page. 
+
+
+At the style sheet at the bottom include a comment: about page styles
+
+And add style rule to the the container that will hold both elements, the iamge and the texts, so we add Grid and two columns to it.
+
+.two-column-wrapper {
+    display: grid;
+    template-column: 1fr 1fr;
+}
+
+and then in the iamge container target the img to say that we want the image width to be 100%
+
+.profile-image-wrapper img {
+    width:100%;
+}
+
+If I look now my content is in two columns, the image is to the left and the text to the right. We need now to style the text with some padding
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+and now I want to style differently the h1 element, so 
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
+Now and it looks great !!! 
+
+
+--------------------------------------------------------------------------------
+
+15. the thing that is still missing area the fonts 
+
+So i can go to Google Fonts and choose: Lato, and choose in embeed the link href provided and paste it in both the index and the about html docs after the title tag but before the css stylesheet link.
+
+We also need to go to the CSS style sheet to add it, because I have the font but I still need to call it, so at the top of the css page, in the body tag, add there on top of the margin: 0px:
+
+font-family: "lato", sans serif;
+
+This means that the Lato font will be used by default, but if you cant use it, because internet in down or slow or whatever reason, the browser will fallback into sans serif font. 
+
+
+--------------------------------------------------------------------------------
+
+16. active states on the nav bar link 
+
+Whenever I am at Home, the active state will make the HOME text show underlined, if I am at the About page, the About text in the nav bar will be underlined, while the HOme text will not.
+
+So we do incorporate this behavior going to the style sheet and at the nav bar section of styles at the bottom of this nav abr stules create a new div class: 
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+the !important is to override the default color behavior ...
+
+Now we have to go to the html doc to call this classes form there.
+
+So we go to the index html div class nav-link wrapper container for the Home link and add next to it the active-nav-link class, and then go to the About html page and at the div class nav-link wrapper container for the About link add next to it the active-nav-link class.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
