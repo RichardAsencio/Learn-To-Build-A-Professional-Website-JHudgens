@@ -1,0 +1,24 @@
+{
+  "name": "Learn-To-Build-A-Professional-Website-JHudgens",
+  "version": "1.0.0",
+  "description": "This is my follow/practice repo for the free YouTube video course: *HTML5 & CSS: Learn How To Build a Professional Website* by Jordan Hudgens",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichardAsencio/Learn-To-Build-A-Professional-Website-JHudgens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage":"https://RichardAsencio.github.io/Learn-To-Build-A-Professional-Website-JHudgens",
+  "bugs": {
+    "url": "https://github.com/RichardAsencio/Learn-To-Build-A-Professional-Website-JHudgens/issues"
+  },
+  "homepage": "https://github.com/RichardAsencio/Learn-To-Build-A-Professional-Website-JHudgens#readme",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
